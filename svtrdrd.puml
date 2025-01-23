@@ -1,0 +1,57 @@
+@startuml
+class Galaga.GalagaFrame {
++ <<Create>> GalagaFrame(String)
++ void setKeyListener()
++ void startTimer()
++ void movement()
++ void checkCollision()
++ boolean dupRect(Rectangle,Rectangle)
++ boolean dupRect2(Polygon,Rectangle2D)
+}
+class Galaga.GalagaGame {
++ {static} void main(String[])
+}
+class Galaga.SpaceShip {
++ <<Create>> SpaceShip(int,int)
++ int getCenterX()
++ int getCenterY()
+}
+class Galaga.Missile {
++ <<Create>> Missile(SpaceShip)
++ void setX(int)
++ void setY(int)
++ boolean getisHit()
++ void setHit(boolean)
+}
+class Galaga.GalagaPanel {
++ <<Create>> GalagaPanel(int,int)
++ void paint(Graphics)
++ void drawOut(Graphics2D)
+- void drawUI(Graphics2D)
++ SpaceShip getShip()
++ Alien[] getAlien()
++ Missile[] getM()
++ void setTimes()
++ int getTimes()
++ void setTimes2()
++ int getTimes2()
++ int getMsNum()
++ void setMsNum(int)
++ void setHit(boolean,int,int)
++ void setOut(int)
++ void setScore(int)
++ int getScore()
++ int getOut()
+}
+class Galaga.Alien {
++ <<Create>> Alien(int)
++ boolean getisHit()
++ void setHit(boolean)
++ void setScore(boolean)
++ boolean isScore()
+}
+
+
+Galaga.JFrame <|-- Galaga.GalagaFrame
+javax.swing.JPanel <|-- Galaga.GalagaPanel
+@enduml

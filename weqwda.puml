@@ -1,0 +1,18 @@
+@startuml
+class Galaga.GalagaFrame {
+}
+class Galaga.GalagaGame {
+}
+class Galaga.SpaceShip {
+}
+class Galaga.Missile {
+}
+class Galaga.GalagaPanel {
+}
+class Galaga.Alien {
+}
+
+
+Galaga.JFrame <|-- Galaga.GalagaFrame
+javax.swing.JPanel <|-- Galaga.GalagaPanel
+@enduml
